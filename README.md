@@ -1,100 +1,86 @@
-# Actuarial-Pricing-Model---GI-Pricing
-# Actuarial Pricing Model – General Insurance
+# Actuarial Pricing and Reserving using GLM
 
-## 📌 Project Overview
-This project demonstrates an end-to-end actuarial pricing framework for a General Insurance portfolio 
-using a frequency–severity approach. The model estimates pure premium, quantifies loss volatility, 
-and derives a capital-aware technical premium.
+## Overview
+This repository presents an end-to-end actuarial pricing and reserving
+framework for a general insurance portfolio using Generalized Linear Models (GLMs).
 
----
-
-## 🎯 Objectives
-- Estimate expected losses using frequency–severity modeling
-- Capture portfolio risk via aggregate loss simulation
-- Derive risk-adjusted technical premium
-- Demonstrate real-world actuarial pricing workflow
+The project is designed to replicate industry-standard actuarial workflows,
+covering experience analysis, pricing model development, reserving validation,
+and regulatory documentation.
 
 ---
 
-## 📂 Data Description
-### Policy Data
-- Policy ID
-- Policy Start & End Date
-- Sum Insured
-- Written Premium
-
-### Claims Data
-- Accident Date
-- Paid Amount
-- Claim Status
+## Business Objective
+To develop a transparent, regulator-friendly pricing model that:
+- Estimates risk-based pure premiums
+- Produces multiplicative rating factors
+- Validates pricing assumptions using reserving outputs
 
 ---
 
-## 🧹 Data Preparation
-- Earned exposure calculation
-- Data cleansing and validation
-- Large loss identification
-- Inflation-adjusted claims (optional)
+## Methodology
+
+### 1. Data Preparation
+- Policy exposure aggregation
+- Claims consolidation
+- Feature engineering and risk banding
+
+### 2. Experience Analysis
+- Claim frequency and severity analysis
+- Loss ratio diagnostics
+- Stability checks across risk segments
+
+### 3. Frequency Modeling
+- Poisson GLM with log link
+- Exposure used as offset
+- Model diagnostics and goodness-of-fit checks
+
+### 4. Severity Modeling
+- Gamma GLM with log link
+- Treatment of skewness and large losses
+
+### 5. Pricing Framework
+- Conversion of GLM coefficients into multiplicative relativities
+- Base rate derivation
+- Pure premium calculation (Frequency × Severity)
+- Construction of rating structure
+
+### 6. Reserving Validation
+- Loss development triangles
+- Chain Ladder reserve estimates
+- Comparison of ultimate losses with priced expectations
+
+### 7. Governance and Documentation
+- Model assumptions and limitations
+- Regulatory justification of GLM usage
+- Reproducibility and audit readiness
 
 ---
 
-## 📊 Methodology
-
-### 1️⃣ Frequency Modeling
-- Poisson distribution
-- Exposure-normalized claim counts
-- Estimation of expected claim frequency
-
-### 2️⃣ Severity Modeling
-- Lognormal distribution
-- Tail-focused modeling
-- Goodness-of-fit validation
-
-### 3️⃣ Pure Premium
-Pure Premium = Expected Frequency × Expected Severity
+## Tools and Technologies
+- Python
+- pandas, numpy
+- statsmodels
+- matplotlib
+- chainladder
 
 ---
 
-## 📈 Aggregate Loss Modeling
-- Monte Carlo simulation
-- Compound loss distribution
-- Risk metrics:
-  - Mean Loss
-  - Value at Risk (VaR)
-  - Tail Value at Risk (TVaR)
+## Key Actuarial Concepts Demonstrated
+- GLM-based pricing
+- Frequency–severity modeling
+- Exposure-based offsets
+- Multiplicative rating factors
+- Pricing and reserving consistency
+- Actuarial governance
 
 ---
 
-## 💰 Pricing Framework
-Technical Premium includes:
-- Expected Loss
-- Risk Margin (VaR-based)
-- Expense Loading
-- Target Profit Margin
+## Disclaimer
+This project is a portfolio-based actuarial model developed for learning and
+demonstration purposes. It does not represent the pricing strategy of any insurer.
 
 ---
 
-## 📊 Validation
-- Actual vs Expected analysis
-- Sensitivity testing
-- Assumption documentation
-
----
-
-## 📦 Deliverables
-- Python pricing model
-- Rate indication outputs
-- Risk metrics dashboard (Power BI)
-- Actuarial pricing report
-
----
-
-## 🛠️ Tech Stack
-- Python (pandas, numpy, scipy)
-- Excel (reconciliation)
-- Power BI (visualization)
-
----
-
-## ⚠️ Disclaimer
-This project is for academic and demonstrative purposes only and does not represent production pricing.
+## Author
+Vaishnav
