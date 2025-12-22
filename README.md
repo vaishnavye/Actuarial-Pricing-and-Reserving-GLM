@@ -9,6 +9,17 @@ covering experience analysis, pricing model development, reserving validation,
 and regulatory documentation.
 
 ---
+## Dataset Brief
+
+### Three interlinked CSVs for end-to-end actuarial modeling:
+
+policy_data.csv (500,000 rows): Policies with exposure, vehicle_age, region, channel, sum_insured, premium (1.5% data quality errors included for realism).
+
+claims_data.csv (44,587 claims): Ultimate claim amounts, accident/development years, status (Open/Closed).
+
+payment_data.csv (155,694 payments): Incremental payments + case reserves per claim.
+
+Purpose: Train frequency/severity GLMs, compute pure premiums, loss ratios, reserving triangles. Synthetic scales are plausible (adjustable base_rate for India motor benchmarks).
 
 ## Business Objective
 To develop a transparent, regulator-friendly pricing model that:
