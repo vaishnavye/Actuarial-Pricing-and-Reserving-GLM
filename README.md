@@ -8,7 +8,7 @@ The project is designed to replicate industry-standard actuarial workflows,
 covering experience analysis, pricing model development, reserving validation,
 and regulatory documentation.
 
-----
+-----
 ## Dataset Brief
 
 ### Three interlinked CSVs for end-to-end actuarial modeling:
