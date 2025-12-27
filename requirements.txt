@@ -1,0 +1,24 @@
+# Core data handling
+pandas>=1.5
+numpy>=1.23
+
+# Statistical modeling
+statsmodels>=0.14
+scipy>=1.9
+
+# Visualization (optional but recommended)
+matplotlib>=3.7
+seaborn>=0.12
+
+# Jupyter environment
+jupyter>=1.0
+notebook>=7.0
+ipykernel>=6.25
+
+# Date handling
+python-dateutil>=2.8
+
+# Utility
+tqdm>=4.65
+# Chainladder for actuarial reserving
+chainladder>=2.4
