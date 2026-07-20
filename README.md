@@ -1,8 +1,8 @@
 # Actuarial Pricing and Reserving using GLM
 
 ## Overview
-This repository presents an end-to-end actuarial pricing and reserving
-framework for a general insurance portfolio using Generalized Linear Models (GLMs).
+##This repository presents an end-to-end actuarial pricing and reserving
+##framework for a general insurance portfolio using Generalized Linear Models (GLMs).
 
 The project is designed to replicate industry-standard actuarial workflows,
 covering experience analysis, pricing model development, reserving validation,
